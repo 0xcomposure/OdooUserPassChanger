@@ -1,6 +1,5 @@
 # OdooUserPassChanger
 =====================
-
 Python script to change the password of an Odoo ERP user.
 
 I didn't remember admin user password in a testing Odoo installation I had for a classroom practice, so I am trying to recover or change it. The faster idea I thought was to change the password in the DB. So I thought to make this script to if it happens again it could fix faster.
