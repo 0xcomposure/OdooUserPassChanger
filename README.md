@@ -1,5 +1,4 @@
 # OdooUserPassChanger
-====
 
 Python script to change the password of an Odoo ERP user.
 
