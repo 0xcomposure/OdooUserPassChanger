@@ -27,7 +27,7 @@ try:
     conn = psycopg2.connect("dbname='" + dbname + "' user='" + dbuser + "' host='" + dbhost + "' password='" + dbpass + "'")
     print ("Opened database successfully")
     cur = conn.cursor()
-    cur.execute("UPDATE res_users SET password_crypt = '"+newpass_crypt+"' WHERE login = '"+usertoupdate+"'");
+    cur.execute("UPDATE res_users SET password_crypt = '"+newpass_crypt+"' WHERE login = '"+usertoupdate+"'")
     conn.commit()
     conn.close()
     print("Password for "+usertoupdate+" has been updated successfully")
