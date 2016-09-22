@@ -7,4 +7,4 @@ I didn't remember admin user password in a testing Odoo installation I had for a
 The script will ask for DB connection settings, user what you want to change the password and the password you want to set to that user. When data are entered the script will connect to the Odoo PostgreSQL DB and will make an update in the DB with the new password for the user.
 
 **NOTE:**
-The script was developed with Python 3, if you are using Python 2 you have to use *raw_input* instead of *input*.
+The script was developed with Python 3, if you are using Python 2 you need to use *raw_input* instead of *input*.
