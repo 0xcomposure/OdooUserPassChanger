@@ -1,4 +1,4 @@
-from passlib.context import CryptCto context
+from passlib.context import CryptCto
 import psycopg2, getpass, signal, sys
 
 """Function to print a message when Ctrl+C is pressed."""
