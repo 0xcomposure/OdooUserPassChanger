@@ -4,8 +4,8 @@ import getpass
 import signal
 import sys
 
-"""Function to print a message when Ctrl+C is pressed."""
-def handler(signum, frame):
+
+def handler(signum, frame):  # Function to print a message when Ctrl+C.
     print('\nLeaving the application...\nGood bye!')
     sys.exit(0)
 
@@ -31,10 +31,13 @@ try to connect with the DB and make the update with the new password.
 if the connection failed return a message.
 """
 try:
-    conn = psycopg2.connect("dbname='" + dbname + "' user='" + dbuser + "' host='" + dbhost + "' password='" + dbpass + "'")
+    conn = psycopg2.connect("dbname='" + dbname + "' user='" + dbuser + "\
+        ' host='" + dbhost + "\
+        ' password='" + dbpass + "'")
     print("Opened database successfully")
     cur = conn.cursor()
-    cur.execute("UPDATE res_users SET password_crypt = '"+newpass_crypt+"' WHERE login = '"+usertoupdate+"'")
+    cur.execute("UPDATE res_users SET password_crypt = '"+newpass_crypt+"\
+        ' WHERE login = '"+usertoupdate+"'")
     conn.commit()
     conn.close()
     print("Password for "+usertoupdate+" has been updated successfully")
