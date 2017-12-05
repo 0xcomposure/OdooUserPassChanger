@@ -13,7 +13,7 @@ signal.signal(signal.SIGINT, handler)
 
 """
 variables to get DB connection data,
-user you want to change de password
+user you will change the password
 and the new password for the user.
 """
 dbname = raw_input("Enter the DB name: ")
@@ -21,7 +21,7 @@ dbuser = raw_input("Enter the DB user: ")
 dbpass = getpass.getpass("Enter the password for " + dbuser + ": ")
 dbhost = raw_input("Enter the host[localhost]: ") or "localhost"
 
-usertoupdate = raw_input("Enter the user you want to change the password: ")
+usertoupdate = raw_input("Enter the user you will change the password: ")
 newpass = getpass.getpass("Enter the new password for "+usertoupdate+": ")
 
 newpass_crypt = CryptContext(['pbkdf2_sha512']).encrypt(newpass)
