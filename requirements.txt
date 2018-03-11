@@ -1,0 +1,2 @@
+passlib==1.7.1
+psycopg2==2.7.4
